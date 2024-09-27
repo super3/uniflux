@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uniflux</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: #333;
+        }
+        #content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+        #prompt-input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 20px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        .container {
+            width: 100%;
+            max-width: 100%;
+            padding: 0;
+            margin: 0 auto;
+        }
+        .input-wrapper {
+            width: 100%;
+            position: relative;
+            overflow: hidden;
+        }
+        input[type="text"] {
+            width: 100%;
+            display: block;
+            box-sizing: border-box;
+            padding: 10px;
+            border: 1px solid #ccc;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+    </style>
+</head>
+<body>
+    <div id="content">
+        <input type="text" id="prompt-input" placeholder="Enter your text to image prompt here">
+        <p>This is an Electron application.</p>
+        <p>You can add more content and functionality here.</p>
+    </div>
+    <script>
+        // You can add JavaScript here or link to an external file
+        console.log('Uniflux is running!');
+        
+        const promptInput = document.getElementById('prompt-input');
+        promptInput.addEventListener('keyup', function(event) {
+            if (event.key === 'Enter') {
+                console.log('Prompt submitted:', promptInput.value);
+                // Here you can add functionality to process the prompt
+            }
+        });
+    </script>
+</body>
+</html>
